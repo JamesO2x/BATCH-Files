@@ -2,7 +2,7 @@
 :: Useful Resources: 	https://legacy.imagemagick.org/Usage/anim_basics/
 :: 						https://justineuro.github.io/animatedGIFs/
 
-cd "C:\xampp\htdocs\img\_WIP\SnS\input"
+cd "C:\img\input"
 convert -delay 2 -dispose previous *.png _output4.gif
 
 :: cd 					== Change Directory, to the working directory of your INPUT files.
