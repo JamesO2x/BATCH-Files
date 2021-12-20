@@ -1,9 +1,0 @@
-Folder PATH listing for volume Cloud HDD
-Volume serial number is 7473-7415
-J:.
-    dirs-files.txt
-    folder-tree.bat
-    remove-empty-folders.bat
-    
-No subfolders exist 
-

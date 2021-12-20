@@ -8,7 +8,7 @@ In the future, I need to add some of my Aseprite Scripts, as well as the WinRAR 
 I should have a few more too, but I can't seem to find where I put them.
 
 > Also, please sort through the scripts listed here:  
-> [.SORT_ME/notes.md](.SORT_ME/notes.md)
+> [notes.md](notes.md)
 
 ---
 

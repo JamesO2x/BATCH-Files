@@ -3,6 +3,6 @@
 everything -search "J:\Dropbox .bat"
 
 @REM use command below to bring up the HELP menu for Everything:
-rem everything -h
+REM everything -h
 
 EXIT

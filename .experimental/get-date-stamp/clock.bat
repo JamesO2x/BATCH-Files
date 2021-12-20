@@ -7,7 +7,7 @@ echo.
 echo    %HH% : %Min% (%Sec% seconds)
 echo.
 
-rem PAUSE
+REM PAUSE
 timeout /t 1 /nobreak
 @REM CLS clears the screen
 CLS
