@@ -1,11 +1,14 @@
 # BAT batch files
-Some batch file scripts I made to help automate a bunch of processes.
+ Some batch file scripts I made to help automate a bunch of processes.
 
 Code by JamesO2.
 
 Note to self: Right now I've only got a few Image conversion scripts, which rely on external Command Line programs to work.
 In the future, I need to add some of my Aseprite Scripts, as well as the WinRAR scripts...
 I should have a few more too, but I can't seem to find where I put them.
+
+> Also, please sort through the scripts listed here:  
+> [.SORT_ME/notes.md](.SORT_ME/notes.md)
 
 ---
 
