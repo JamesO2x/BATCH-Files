@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>PipeList JS - Lulu's List (v2)</h1>
+        <p>A Pen created on CodePen.io. Original URL: <a href="https://codepen.io/jameso2/pen/zYZvxvJ" rel="noopener" target="_blank">https://codepen.io/jameso2/pen/zYZvxvJ</a>.</p>
+    </header>
+
+    <!--
+    ██╗███╗   ██╗██████╗ ██╗   ██╗████████╗    ████████╗ █████╗ ██████╗ ██╗     ███████╗
+    ██║████╗  ██║██╔══██╗██║   ██║╚══██╔══╝    ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝
+    ██║██╔██╗ ██║██████╔╝██║   ██║   ██║          ██║   ███████║██████╔╝██║     █████╗  
+    ██║██║╚██╗██║██╔═══╝ ██║   ██║   ██║          ██║   ██╔══██║██╔══██╗██║     ██╔══╝  
+    ██║██║ ╚████║██║     ╚██████╔╝   ██║          ██║   ██║  ██║██████╔╝███████╗███████╗
+    ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝    ╚═╝          ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝
+    -->
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">
+                    <label for="method">Choose a Method: </label>
+                    <select id="method" name="method" onchange="change(this.value)" onload="change(this.value)">
+                        <option value="opt6a">Lulu's List A - Spaced Out</option>
+                        <option value="opt8">SpreadSheet Format (tab separated) (*.tsv)</option>
+                        <option value="opt9">HTML Table</option>
+                        <option value="opt0">---</option>
+                        <option value="opt7">JameO2's Social Links List</option>
+                    </select>
+                    <br />
+                    <label for="separator">Separator: </label>
+                    <input type="text" id="separator" name="separator" value="||" />
+                </th>
+            </tr>
+            <tr>
+                <th>Input:</th>
+                <th>Output:</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="input" id="input" rows="15" wrap="soft">
+// This is the format:
+|| title || URL || description || tag1 tag2 etc
+
+## Some links I like.
+|| paul mccartney || https://paulmccartney.com || My favorite underground musician, I think he's gonna be big someday. || music obscure-media
+|| neopets || https://neopets.com || A little-known capitalism simulator. || games obscure-media
+|| Third Item || https://neocities.org || (This link takes you to NeoCities.org) || websites creative
+|| 4th Item || https://neocities.org || (This link takes you to NeoCities.org) || websites creative
+|| 5th Item || https://neocities.org || (This link takes you to NeoCities.org) || websites creative
+
+// Any lines starting with the double-slash like this will be ignored, and not added to the output. But you have to make sure there are no spaces before the // part, otherwise it won't work.
+// And you can add as many comment lines like this as you want. :)
+
+<h3>Example of regular <strong>HTML</strong> in between lines</h3>
+|| JamesO2.NeoCities.org || https://jameso2.neocities.org || JamesO2's site || tag1 tag2 etc
+|| JamesO2's Portfolio Collage || https://youtu.be/NSzUt5DZ2tk || A youtube video of some pixel animations || tag1 tag2 etc
+|| Email Example || mailto:example@site.com || (you can direct-link to an email if you add "mailto:example@site.com" for the URL) || tag1 tag2 etc
+
+<hr/>
+<h4>Different Spacing produces same results!:</h4>
+// How you want to add spacing around the || is optional. So both of these following lines will produce the same result:
+    ||   paul mccartney   ||   https://paulmccartney.com   ||   My favorite underground musician, I think he's gonna be big someday.   ||   music obscure-media
+||paul mccartney||https://paulmccartney.com||My favorite underground musician, I think he's gonna be big someday.||music obscure-media
+</textarea>
+                </td>
+                <td>
+                    <textarea name="output" id="output" rows="15" wrap="soft">Output will appear here after you hit "convert"</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="convertBtn" onclick="readLines()">Convert</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <!--
+     ██████╗ ███████╗███████╗ ██████╗██████╗ ██╗██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+     ██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+     ██║  ██║█████╗  ███████╗██║     ██████╔╝██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
+     ██║  ██║██╔══╝  ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
+     ██████╔╝███████╗███████║╚██████╗██║  ██║██║██║        ██║   ██║╚██████╔╝██║ ╚████║
+     ╚═════╝ ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+    -->
+    <p>Choose a Method to parse from the drop-down box above.</p>
+
+    <ul>
+        <li>Lulu's List A - Spaced Out (all the HTML is spaced and indented)</li>
+        <li><strike>Lulu's List B - Slightly Condensed (the A and SPAN tags are condensed to single lines)</strike></li>
+        <li><strike>Lulu's List C - Condensed to 1 Line (the whole line is condensed to 1 line of HTML)</strike></li>
+        <li>Removed B & C styles to simplify testing.</li>
+        <li>SpreadSheet Format (tab separated) - This will convert your list into a format that can be copy/pasted into a spreadsheet program and will fill the cells.</li>
+        <li>HTML Table - will format your list into an HTML table instead of DIVs. (note, you have to manually add the TABLE and TBODY tags around your list -- you can do this in the input too.)</li>
+        <li>JamesO2's Social Links List - Experimental rendering test.</li>
+    </ul>
+
+    <h2>INPUT FORMAT:</h2>
+    <code>|| title || URL || description || tag1 tag2 etc</code>
+
+    <ul>
+        <li><code>||</code> = Start a list item line.</li>
+        <li>(no <code>||</code> at start) = Plain HTML line (insert any normal HTML, or leave blank)</li>
+        <li><code>//</code> = Line is ignored (blank line) (use for adding comments to your list)</li>
+        <li><code>##</code> = Makes this line an H2 HTML tag.</li>
+        <li>If you add an HTML comment <code>&lt;!-- Comment --&gt;</code> it will be added to the Output as-is. So you can do this if you'd prefer your comments be publicly visible in your HTML.</li>
+        <li>The "tags" (list filter tags, not HTML tags) at the end are separated by spaces so there can't be any spaces inside your "tags" (use hyphens instead). So tags like "music obscure media" would be interpetted as 3 tags, while "music obscure-media" is interpretted as 2 tags.</li>
+    </ul>
+
+    <hr />
+    <p><strike>This tool is very "blank space sensitive" so make sure to add a single space before and after the Double-Pipe separators! (it literally interprets the whole text-string <code>" || "</code> as the separator, not just <code>"||"</code>)</strike></p>
+
+    <p><strike>Do <em>not</em> add a space before the first <em>Double-Pipes</em> at the start of a line. And also do <em>not</em> add any <em>Double-Pipes</em> at the end of a line.</strike></p>
+
+    <p>EDIT: 2021.05.10 - This white-space sensitivity has been fixed. You can now have spaces and tabs before the first "||". Also any extra spaces before or after other "||" separators will be trimmed out. Do note that the "tags" section is still space-sensitive, as that is how the classnames will be applied to the HTML.</p>
+
+    <p>So this: <br>
+        <code>|| &nbsp;&nbsp; paul mccartney &nbsp;&nbsp; || &nbsp;&nbsp; https://paulmccartney.com&nbsp;&nbsp; || &nbsp;&nbsp; My favorite underground musician, I think he's gonna be big someday. &nbsp;&nbsp; || &nbsp;&nbsp; music obscure-media</code>
+    </p>
+    <p>Should produce the same results as this: <br>
+        <code>||paul mccartney||https://paulmccartney.com||My favorite underground musician, I think he's gonna be big someday.||music obscure-media</code>
+    </p>
+    <p>
+        You can use any kind of visual spacing you like. The only thing that matters is that the first non-blank characters on a line should start with "||" so the script knows to convert it. Also, the indent you use at the beginning of a line (tabs or spaces before the first "||") will be preserved in the Output, so your generated HTML should be clean and organized -- properly indented as you like.
+    </p>
+
+    <hr />
+
+
+    <!--
+    ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+    ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+    █████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+    ██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+    ██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+    ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+    -->
+    <!-- Ko-Fi Link Button -->
+    <p>
+        If you found this script useful, please consider dropping me a tip on Ko-Fi. I don't make much, and every little bit helps.
+        <br />
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'K3K0OUUV'); kofiwidget2.draw();</script>
+    </p>
+
+    <p>This page and script designed by JamesO2 (2020), for use with the NeoCities hosting platform. Click the Logo below to go back to my site!</p>
+
+    <h1>
+        <a href="https://jameso2.neocities.org/">
+            <img src="https://jameso2.neocities.org/styles/carbon2020/logo.png" alt="jameso2.neocities.org">
+        </a>
+    </h1>
+
+    <p>Last updated: 2021.05.08</p>
+
+    <footer>
+        Check out some of my other work on <a href="https://jameso2.itch.io" rel="noopener" target="_blank">Itch.io</a> or send me a tip on <a href="https://ko-fi.com/jamesorthii" rel="noopener" target="_blank">Ko-Fi</a>! - JamesO2
+    </footer>
+
+    <!--
+    ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗███████╗
+    ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██╔════╝
+    ███████╗██║     ██████╔╝██║██████╔╝   ██║   ███████╗
+    ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   ╚════██║
+    ███████║╚██████╗██║  ██║██║██║        ██║   ███████║
+    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚══════╝
+    -->
+    <script src="script.js"></script>
+
+</body>
+</html>

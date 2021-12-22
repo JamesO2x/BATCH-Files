@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/*
+ ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ██╗     
+██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗██║     
+██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║██║     
+██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██║     
+╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║███████╗
+ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝  #region */
+  * {box-sizing: border-box;}
+  body {
+    background-color: #000;
+    color: #fff;
+    /* background-image: url(https://i.imgur.com/XWmoLjk.gif); */
+    background-image: url(media/XWmoLjk.gif);
+    margin-bottom: 4em; /* Breathing room for the Footer */
+    /* font-family: 'Press Start 2P', monospace; */
+    /* font-family: 'VT323', monospace; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0 10%;
+  }
+  
+  code {
+    color: lime;
+    background-color: #121;
+  }
+  
+  a, a:link {
+    color: gold;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+  a:visited {
+    color: #faf;
+    font-size: 1em;
+  }
+  a:hover, a:active {
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: gold;
+  }
+  
+  table {width: 100%;}
+  table, tr, th, td {border: 1px solid green;}
+  strike {color: grey;}
+  em {color: lime;}
+  strong {color: yellow;}
+  
+  hr {
+    border: none;
+    border-bottom: 2px dashed green;
+    margin: 40px 0;
+  }
+/* #endregion */
+
+/*
+██╗  ██╗███████╗ █████╗ ██████╗ ███████╗██████╗   |  ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██║  ██║██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗  |  ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+███████║█████╗  ███████║██║  ██║█████╗  ██████╔╝  |  █████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══██║██╔══╝  ██╔══██║██║  ██║██╔══╝  ██╔══██╗  |  ██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║  ██║███████╗██║  ██║██████╔╝███████╗██║  ██║  |  ██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝  |  ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝ #region */
+  header {
+    border: none;
+    border-bottom: 2px dashed green;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 0;  
+  }
+
+  header p {
+    margin: 0;
+    padding: 0;  
+  }
+    
+
+  #pre-footer {
+    /* This just adds a little space for the Fixed Footer, and a bit of scroll room at the end of the document */
+    margin-bottom: 8em;;
+  }
+
+  footer {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      height: 2em;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      padding: 8px;
+      background: green;
+      width: 100%;
+    }
+
+  footer>a,
+  footer>a:link,
+  footer>a:visited,
+  footer>a:hover,
+  footer>a:active {
+    color: gold;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+/* #endregion */
+
+/*
+██╗███╗   ██╗██████╗ ██╗   ██╗████████╗███████╗
+██║████╗  ██║██╔══██╗██║   ██║╚══██╔══╝██╔════╝
+██║██╔██╗ ██║██████╔╝██║   ██║   ██║   ███████╗
+██║██║╚██╗██║██╔═══╝ ██║   ██║   ██║   ╚════██║
+██║██║ ╚████║██║     ╚██████╔╝   ██║   ███████║
+╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝    ╚═╝   ╚══════╝ #region */
+  button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    background-color: #122;
+    color: gold;
+    border: 2px solid black;
+  }
+  input[type="text"], select, textarea {
+    background-color: #344;
+    color: gold;
+    border: 1px solid lime;
+    width: 80%;
+    display: inline-block;
+    float: right;
+    margin: 1px;;
+  }
+  label {
+    display: inline-block;
+    float: left;
+  }
+  
+  li {margin-bottom: 10px;}
+  ol>ol {list-style-type:  lower-alpha;}
+  
+  /* Thanks: https://stackoverflow.com/questions/657795/how-to-remove-word-wrap-from-textarea */
+  textarea {
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: scroll;
+    height: 400px;
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+  }
+/* #endregion */
