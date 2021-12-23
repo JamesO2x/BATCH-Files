@@ -1,0 +1,52 @@
+[
+  {
+    "id": "LuLu_ListA",
+    "option": "Lulu's List A - Spaced Out",
+    "function": "modeLulusListA",
+    "cases": ["//", "##", "||"],
+    "format": "(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG"
+  },
+  {
+    "id": "text_TSV",
+    "option": "SpreadSheet Format (tab separated) (*.tsv)",
+    "function": "modeSpreadsheetTSV",
+    "cases": ["//", "##", "||"],
+    "format": "(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG"
+  },
+  {
+    "id": "html_table",
+    "option": "HTML Table",
+    "function": "modeHTMLTable",
+    "cases": ["//", "##","__", "||"],
+    "format": "(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG"
+  },
+  {
+    "id": "JO2_SocialLinks",
+    "option": "JameO2's Social Links List",
+    "function": "modeJo2SocialLinks",
+    "cases": ["//", "##", "||"],
+    "format": "(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG"
+  },
+  {
+    "id": "hr_1",
+    "option": "---"
+  },
+  {
+    "id": "MFA_to_JS",
+    "option": "MFA to Pseudo-JS",
+    "function": "modeMFAtoJS",
+    "cases": ["//", "``", "* ", "+ ", "[ "],
+    "format": "MFA auto-generated Copy pseudo-code"
+  },
+  {
+    "id": "MFA_to_JS_simp",
+    "option": "MFA to Pseudo-JS (simpler)",
+    "function": "modeMFAtoJSSimple",
+    "cases": ["//", "``", "* ", "+ ", "[ "],
+    "format": "MFA auto-generated Copy pseudo-code"
+  },
+  {
+    "id": "hr2",
+    "option": "---"
+  }
+]

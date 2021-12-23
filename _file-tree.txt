@@ -1,0 +1,122 @@
+Folder PATH listing for volume Cloud HDD
+Volume serial number is 7473-7415
+J:.
+|   .gitattributes
+|   .gitignore
+|   NOTES.md
+|   README.md
+|   _dir-tree.txt
+|   _file-list.txt
+|   _file-tree.txt
+|   
++---BAT
+|   +---Asesprite Scripts
+|   |   \---Export GIFs
+|   |       |   animation_sample.ase
+|   |       |   export.bat
+|   |       |   
+|   |       +---tags_x1
+|   |       \---tags_x2
+|   +---AutoHotKey Scripts
+|   |       compile-AHK-to-EXE.bat
+|   |       
+|   +---Everything Search Scripts
+|   |       batch files in dropbox.bat
+|   |       test.bat
+|   |       
+|   +---Folder Manipulation Scripts
+|   |       folder-tree_DnD.bat
+|   |       list-all-files_DnD.bat
+|   |       mirror.bat
+|   |       remove-empty-folders.bat
+|   |       test.bat
+|   |       
+|   +---Image Conversion Scripts
+|   |       FFMPEG_GIF-to-MP4.bat
+|   |       GIFsicle_Compress_DnD.bat
+|   |       ImageMagick_combine_png_to_GIF.bat
+|   |       tilly-v2.gif
+|   |       
+|   +---Misc Scripts
+|   |       Firefox Profiler.bat
+|   |       FreeCommanderTest.bat
+|   |       Open Obsidian Vault Note.bat
+|   |       Open Terminal On Directory.bat
+|   |       
+|   +---Text Conversion Scripts
+|   |       html-to-md.bat
+|   |       md-to-html_BULK.bat
+|   |       md-to-html_DnD.bat
+|   |       
+|   +---ToDoList Scripts
+|   |       TDL_test.bat
+|   |       
+|   +---Windows RegEdits
+|   |       change_font.reg
+|   |       
+|   +---Windows Scripts
+|   |       export_start_menu.bat
+|   |       RestartExplorer.bat
+|   |       
+|   +---WinRAR Backup Scripts
+|   |       WinRAR Backup - Basic.bat
+|   |       WinRAR Backup - Exclude Files Folders.bat
+|   |       
+|   +---_Drag-N-Drop-Prompts
+|   |       DnD_Prompt_Example.bat
+|   |       DnD_With_Choices.bat
+|   |       
+|   +---_experimental
+|   |   +---auto-backup
+|   |   |       auto_backup.bat
+|   |   |       date.bat
+|   |   |       image.png
+|   |   |       
+|   |   +---batch variables
+|   |   |       get_var.bat
+|   |   |       share_var.bat
+|   |   |       
+|   |   \---get-date-stamp
+|   |           call_date.bat
+|   |           clock.bat
+|   |           date.bat
+|   |           
+|   \---_SORT_ME
+|           ClickTeam - Move New Extension Examples.bat
+|           ClickTeam_Backup.bat
+|           Copy_User_Folders.bat
+|           SoundFont_Backup.bat
+|           TOOLS_Backup.bat
+|           
++---JS
+|   |   index.html
+|   |   NOTES.md
+|   |   style.css
+|   |   
+|   +---conversion-scripts
+|   |       modeHTMLTable.js
+|   |       modeJo2SocialLinks.js
+|   |       modeLulusListA.js
+|   |       modeSpreadsheetTSV.js
+|   |       _BASE.js
+|   |       _BASE_Working.js
+|   |       _template.js
+|   |       
+|   +---includes
+|   |       description.js
+|   |       footer.js
+|   |       test.js
+|   |       
+|   +---media
+|   |       logo-pulse.gif
+|   |       XWmoLjk.gif
+|   |       
+|   \---util-scripts
+|           allow-tab-key.js
+|           clipboard.js
+|           _switcher.js
+|           
+\---_backup
+        index.html
+        script.js
+        

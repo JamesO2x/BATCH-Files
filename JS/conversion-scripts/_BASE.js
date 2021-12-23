@@ -28,7 +28,6 @@ function readLines() {
         // ANCHOR : Testing Area
         // * TESTING AREA ////////////////////////////////////////////////////////////////////////
         // * TESTING AREA ////////////////////////////////////////////////////////////////////////
-
         
         // * TESTING AREA ////////////////////////////////////////////////////////////////////////
         // * TESTING AREA ////////////////////////////////////////////////////////////////////////
@@ -38,11 +37,13 @@ function readLines() {
         // ! /////////////////////////////////////////////////////////////////////////////////////
         // ! SWITCH CASE GOES HERE ///////////////////////////////////////////////////////////////
         switch(mode) {
-            case 'PLACEHOLDER': output.value += 'Hello World!' + '\n'; break;
+            case 'hr_1': output.value += 'Hello World!' + '\n'; break;
             case 'LuLu_ListA': modeLulusListA(lines, i, lineCode); break;
-            case 'PlainText': modeSpreadsheetTSV(lines, i, lineCode); break;
+            case 'text_TSV': modeSpreadsheetTSV(lines, i, lineCode); break;
             case 'html_table': modeHTMLTable(lines, i, lineCode); break;
             case 'JO2_SocialLinks': modeJo2SocialLinks(lines, i, lineCode); break;
+            case 'MFA_to_JS': modeMFAtoJS(lines, i, lineCode); break;
+            case 'MFA_to_JS_simp': modeMFAtoJSSimple(lines, i, lineCode); break;
             default: break;
         }
         // ! SWITCH CASE GOES HERE ///////////////////////////////////////////////////////////////

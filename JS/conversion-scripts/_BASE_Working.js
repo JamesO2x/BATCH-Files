@@ -33,7 +33,7 @@ function readLines() {
         switch(mode) {
 
             //b BLANK Option /////////////////////////////////////////////////
-            case 'PLACEHOLDER':		// Option0 does nothing, just a placeholder
+            case 'hr_1':		// Option0 does nothing, just a hr_1
                 output.value += 'Hello World!' + '\n';
                 break;
             
@@ -87,7 +87,7 @@ function readLines() {
             // SpreadSheet Output Format (tab separated) ////////////////
             ////////////////////////////////////////////////////////////
             // (0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG
-            case 'PlainText':		// SpreadSheet Format
+            case 'text_TSV':		// SpreadSheet Format
                 // Print Comment Lines
                 if (lineCode === '//') {
                     // Convert "//" & Split the line into parts by "||"

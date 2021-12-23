@@ -1,0 +1,9 @@
+"id","option","function","cases","format"
+"LuLu_ListA","Lulu's List A - Spaced Out","modeLulusListA ","//, ##, ||","(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG "
+"text_TSV","SpreadSheet Format (tab separated) (*.tsv)","modeSpreadsheetTSV ","//, ##, ||","(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG "
+"html_table","HTML Table","modeHTMLTable ","//, ##,__, ||","(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG "
+"JO2_SocialLinks","JameO2's Social Links List","modeJo2SocialLinks ","//, ##, ||","(0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG "
+"hr_1","---",,,
+"MFA_to_JS","MFA to Pseudo-JS","modeMFAtoJS ","//, ``, * , + , [ ","MFA auto-generated Copy pseudo-code"
+"MFA_to_JS_simp","MFA to Pseudo-JS (simpler)","modeMFAtoJSSimple ","//, ``, * , + , [ ","MFA auto-generated Copy pseudo-code"
+"hr2","---",,,

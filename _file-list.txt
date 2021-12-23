@@ -1,0 +1,96 @@
+J:\GitHub\BATCH-Files\_backup
+J:\GitHub\BATCH-Files\BAT
+J:\GitHub\BATCH-Files\JS
+J:\GitHub\BATCH-Files\.gitattributes
+J:\GitHub\BATCH-Files\.gitignore
+J:\GitHub\BATCH-Files\_dir-tree.txt
+J:\GitHub\BATCH-Files\_file-list.txt
+J:\GitHub\BATCH-Files\_file-tree.txt
+J:\GitHub\BATCH-Files\NOTES.md
+J:\GitHub\BATCH-Files\README.md
+J:\GitHub\BATCH-Files\BAT\_Drag-N-Drop-Prompts
+J:\GitHub\BATCH-Files\BAT\_experimental
+J:\GitHub\BATCH-Files\BAT\_SORT_ME
+J:\GitHub\BATCH-Files\BAT\Asesprite Scripts
+J:\GitHub\BATCH-Files\BAT\AutoHotKey Scripts
+J:\GitHub\BATCH-Files\BAT\Everything Search Scripts
+J:\GitHub\BATCH-Files\BAT\Folder Manipulation Scripts
+J:\GitHub\BATCH-Files\BAT\Image Conversion Scripts
+J:\GitHub\BATCH-Files\BAT\Misc Scripts
+J:\GitHub\BATCH-Files\BAT\Text Conversion Scripts
+J:\GitHub\BATCH-Files\BAT\ToDoList Scripts
+J:\GitHub\BATCH-Files\BAT\Windows RegEdits
+J:\GitHub\BATCH-Files\BAT\Windows Scripts
+J:\GitHub\BATCH-Files\BAT\WinRAR Backup Scripts
+J:\GitHub\BATCH-Files\BAT\Asesprite Scripts\Export GIFs
+J:\GitHub\BATCH-Files\BAT\Asesprite Scripts\Export GIFs\tags_x1
+J:\GitHub\BATCH-Files\BAT\Asesprite Scripts\Export GIFs\tags_x2
+J:\GitHub\BATCH-Files\BAT\Asesprite Scripts\Export GIFs\animation_sample.ase
+J:\GitHub\BATCH-Files\BAT\Asesprite Scripts\Export GIFs\export.bat
+J:\GitHub\BATCH-Files\BAT\AutoHotKey Scripts\compile-AHK-to-EXE.bat
+J:\GitHub\BATCH-Files\BAT\Everything Search Scripts\batch files in dropbox.bat
+J:\GitHub\BATCH-Files\BAT\Everything Search Scripts\test.bat
+J:\GitHub\BATCH-Files\BAT\Folder Manipulation Scripts\folder-tree_DnD.bat
+J:\GitHub\BATCH-Files\BAT\Folder Manipulation Scripts\list-all-files_DnD.bat
+J:\GitHub\BATCH-Files\BAT\Folder Manipulation Scripts\mirror.bat
+J:\GitHub\BATCH-Files\BAT\Folder Manipulation Scripts\remove-empty-folders.bat
+J:\GitHub\BATCH-Files\BAT\Folder Manipulation Scripts\test.bat
+J:\GitHub\BATCH-Files\BAT\Image Conversion Scripts\FFMPEG_GIF-to-MP4.bat
+J:\GitHub\BATCH-Files\BAT\Image Conversion Scripts\GIFsicle_Compress_DnD.bat
+J:\GitHub\BATCH-Files\BAT\Image Conversion Scripts\ImageMagick_combine_png_to_GIF.bat
+J:\GitHub\BATCH-Files\BAT\Image Conversion Scripts\tilly-v2.gif
+J:\GitHub\BATCH-Files\BAT\Misc Scripts\Firefox Profiler.bat
+J:\GitHub\BATCH-Files\BAT\Misc Scripts\FreeCommanderTest.bat
+J:\GitHub\BATCH-Files\BAT\Misc Scripts\Open Obsidian Vault Note.bat
+J:\GitHub\BATCH-Files\BAT\Misc Scripts\Open Terminal On Directory.bat
+J:\GitHub\BATCH-Files\BAT\Text Conversion Scripts\html-to-md.bat
+J:\GitHub\BATCH-Files\BAT\Text Conversion Scripts\md-to-html_BULK.bat
+J:\GitHub\BATCH-Files\BAT\Text Conversion Scripts\md-to-html_DnD.bat
+J:\GitHub\BATCH-Files\BAT\ToDoList Scripts\TDL_test.bat
+J:\GitHub\BATCH-Files\BAT\Windows RegEdits\change_font.reg
+J:\GitHub\BATCH-Files\BAT\Windows Scripts\export_start_menu.bat
+J:\GitHub\BATCH-Files\BAT\Windows Scripts\RestartExplorer.bat
+J:\GitHub\BATCH-Files\BAT\WinRAR Backup Scripts\WinRAR Backup - Basic.bat
+J:\GitHub\BATCH-Files\BAT\WinRAR Backup Scripts\WinRAR Backup - Exclude Files Folders.bat
+J:\GitHub\BATCH-Files\BAT\_Drag-N-Drop-Prompts\DnD_Prompt_Example.bat
+J:\GitHub\BATCH-Files\BAT\_Drag-N-Drop-Prompts\DnD_With_Choices.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\auto-backup
+J:\GitHub\BATCH-Files\BAT\_experimental\batch variables
+J:\GitHub\BATCH-Files\BAT\_experimental\get-date-stamp
+J:\GitHub\BATCH-Files\BAT\_experimental\auto-backup\auto_backup.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\auto-backup\date.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\auto-backup\image.png
+J:\GitHub\BATCH-Files\BAT\_experimental\batch variables\get_var.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\batch variables\share_var.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\get-date-stamp\call_date.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\get-date-stamp\clock.bat
+J:\GitHub\BATCH-Files\BAT\_experimental\get-date-stamp\date.bat
+J:\GitHub\BATCH-Files\BAT\_SORT_ME\ClickTeam - Move New Extension Examples.bat
+J:\GitHub\BATCH-Files\BAT\_SORT_ME\ClickTeam_Backup.bat
+J:\GitHub\BATCH-Files\BAT\_SORT_ME\Copy_User_Folders.bat
+J:\GitHub\BATCH-Files\BAT\_SORT_ME\SoundFont_Backup.bat
+J:\GitHub\BATCH-Files\BAT\_SORT_ME\TOOLS_Backup.bat
+J:\GitHub\BATCH-Files\JS\conversion-scripts
+J:\GitHub\BATCH-Files\JS\includes
+J:\GitHub\BATCH-Files\JS\media
+J:\GitHub\BATCH-Files\JS\util-scripts
+J:\GitHub\BATCH-Files\JS\index.html
+J:\GitHub\BATCH-Files\JS\NOTES.md
+J:\GitHub\BATCH-Files\JS\style.css
+J:\GitHub\BATCH-Files\JS\conversion-scripts\_BASE.js
+J:\GitHub\BATCH-Files\JS\conversion-scripts\_BASE_Working.js
+J:\GitHub\BATCH-Files\JS\conversion-scripts\_template.js
+J:\GitHub\BATCH-Files\JS\conversion-scripts\modeHTMLTable.js
+J:\GitHub\BATCH-Files\JS\conversion-scripts\modeJo2SocialLinks.js
+J:\GitHub\BATCH-Files\JS\conversion-scripts\modeLulusListA.js
+J:\GitHub\BATCH-Files\JS\conversion-scripts\modeSpreadsheetTSV.js
+J:\GitHub\BATCH-Files\JS\includes\description.js
+J:\GitHub\BATCH-Files\JS\includes\footer.js
+J:\GitHub\BATCH-Files\JS\includes\test.js
+J:\GitHub\BATCH-Files\JS\media\logo-pulse.gif
+J:\GitHub\BATCH-Files\JS\media\XWmoLjk.gif
+J:\GitHub\BATCH-Files\JS\util-scripts\_switcher.js
+J:\GitHub\BATCH-Files\JS\util-scripts\allow-tab-key.js
+J:\GitHub\BATCH-Files\JS\util-scripts\clipboard.js
+J:\GitHub\BATCH-Files\_backup\index.html
+J:\GitHub\BATCH-Files\_backup\script.js

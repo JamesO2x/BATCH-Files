@@ -1,5 +1,5 @@
 // Method:    SpreadSheet Format (tab separated) (*.tsv)
-// Option:    PlainText
+// Option:    text_TSV
 
 // Format:
 // (0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG

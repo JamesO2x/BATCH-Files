@@ -2,7 +2,7 @@
 function change(mode){
     // Change option using "onchange" - sets some default parameters.
     switch(mode) {
-        case 'PLACEHOLDER':
+        case 'hr_1':
             // Placeholder
             console.log(mode + " - PLACEHOLDER")
             break;
@@ -18,7 +18,7 @@ function change(mode){
             // JamesO2's Social Links List Format
             console.log(mode + " - JamesO2's Social Links List")
             break;
-        case 'PlainText':
+        case 'text_TSV':
             // Plain Text Format
             console.log(mode + " - Plain Text Mode")
             break;

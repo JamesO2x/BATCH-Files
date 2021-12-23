@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- CodeMirror Stylesheets -->
+    <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="./codemirror/theme/dracula.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>PipeList JS</h1>
+        <p>A Pen created on CodePen.io. Original URL: <a href="https://codepen.io/jameso2/pen/zYZvxvJ" rel="noopener" target="_blank">https://codepen.io/jameso2/pen/zYZvxvJ</a>.</p>
+    </header>
+
+    <!--
+    ██╗███╗   ██╗██████╗ ██╗   ██╗████████╗    ████████╗ █████╗ ██████╗ ██╗     ███████╗
+    ██║████╗  ██║██╔══██╗██║   ██║╚══██╔══╝    ╚══██╔══╝██╔══██╗██╔══██╗██║     ██╔════╝
+    ██║██╔██╗ ██║██████╔╝██║   ██║   ██║          ██║   ███████║██████╔╝██║     █████╗  
+    ██║██║╚██╗██║██╔═══╝ ██║   ██║   ██║          ██║   ██╔══██║██╔══██╗██║     ██╔══╝  
+    ██║██║ ╚████║██║     ╚██████╔╝   ██║          ██║   ██║  ██║██████╔╝███████╗███████╗
+    ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝    ╚═╝          ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝
+    -->
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">
+                    <label for="method">Choose a Method: </label>
+                    <select id="method" name="method" onchange="change(this.value)" onload="change(this.value)">
+                        <option value="LuLu_ListA">Lulu's List A - Spaced Out</option>
+                        <option value="text_TSV">SpreadSheet Format (tab separated) (*.tsv)</option>
+                        <option value="html_table">HTML Table</option>
+                        <option value="hr_1">---</option>
+                        <option value="JO2_SocialLinks">JameO2's Social Links List</option>
+                        <option value="MFA_to_JS">MFA to Pseudo-JS</option>
+                        <option value="MFA_to_JS_simp">MFA to Pseudo-JS (simpler)</option>
+                    </select>
+                    <br />
+                    <label for="separator">Separator: </label>
+                    <input type="text" id="separator" name="separator" value="||" />
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <span>Format:</span><br>
+                    <code id="format">
+                        // (0) || (1) title || (2) URL || (3) description || (4) tag1 tag2 etc || (5) Icon || (6) FLAG
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <th>Input:</th>
+                <th>Output:</th>
+            </tr>
+            <tr>
+                <td>
+<textarea name="input" id="input" rows="15" wrap="soft">
+# SpeedTile (Pseudo) Source
+This text is generated as pseudo-code for the source `*.mfa` binary file.
+
+```js
+// == LAST UPDATE ==
+// Week: 4, Day: 24 -- Date: 2019/01/24 -- 08:17:39 (8:17 AM)
+
+[ comment theme (Silent Garden) ]
+
+    // Title Comment
+
+    // Code by: James O.
+
+    // 
+
+    // ! -- ATTENTION -- !
+
+    // Code Header
+
+    // Quick comment on a certain event or events.
+
+    // Longer detailed comment explaining something with great detail. Can have many paragraphs here. Using a more English approach instead of a quick "this is what this does."
+
+// SpeedTile - App Launcher
+
+// Code by: James O.
+
+// -= PROJECT STARTED ON =-
+// Week: 4, Day: 23 -- Date: 2019/01/23 -- 08:17:46 (8:17 AM)
+
+// 
+
+// Array X Values:     Array Y Value:    
+// 0 = ID              00 = 0            
+// 1 = keyCode         01 = 1            
+// 2 = keyChar         02 = 2            
+// 3 = keyName         03 = 3            
+// 4 = x               04 = 4            
+// 5 = y               05 = 5            
+// 6 = shape           06 = 6            
+// 7 = anim            07 = 7            
+// 8 = launchPath      08 = 8            
+// 9 = iconPath        09 = 9            
+//                     10 = MULT         
+//                     11 = ADD          
+//                     12 = ENTER        
+//                     13 = SUB          
+//                     14 = POINT        
+//                     15 = DIV          
+//                     16 = [NumLock]    
+
+[ Program ]
+
+    [ Init ]
+
+        // Startup Events
+
+        * Start of Frame
+            Sound : Lock channel 1
+            Special : Set iniPath to Apppath$ + ".speedtile\commands.ini"
+            Ini : Set current file to iniPath
+            Special : Set soundConfirm_G to GroupItemString$( "Ini", "config", "soundConfirm" )
+            Special : Set soundError_G to GroupItemString$( "Ini", "config", "soundError" )
+            Special : Set soundDelete_G to GroupItemString$( "Ini", "config", "soundDelete" )
+
+        // Load Graphics
+
+        * Start of Frame
+            Tile_Button_Backdrop : Load Apppath$ + ".speedtile\gui\" + GroupItemString$( "Ini", "config", "backdrop" ) into Animation Stopped, Direction ............, Frame #0, HotSpot(0,0), Action Point(0,0), Transparent Color RGB(255,0,255)
+            Error_Message : Load Apppath$ + ".speedtile\gui\" + GroupItemString$( "Ini", "config", "errorGraphic" ) into Animation Stopped, Direction ............, Frame #0, HotSpot(0,0), Action Point(0,0), Transparent Color RGB(255,0,255)
+            Error_Message : Load Apppath$ + ".speedtile\gui\" + GroupItemString$( "Ini", "config", "deleteGraphic" ) into Animation Stopped, Direction ............, Frame #1, HotSpot(0,0), Action Point(0,0), Transparent Color RGB(255,0,255)
+
+        [ Create Buttons ]
+
+            // Start a loop 17 times (number of keys on the keypad)
+
+            * Start of Frame
+                Special : Start loop "create_buttons" 17 times
+
+            // Set positions and values
+
+            * On loop "create_buttons"
+                String tokenizer : Split string List Line Text$( "List", LoopIndex("create_buttons") + 1 ) with delimiters "," (1D)
+                Array : Set Y dimension index to LoopIndex("create_buttons")
+                Array : Write String Element$( "String tokenizer", 0 ) to (0)
+                Array : Write String Element$( "String tokenizer", 1 ) to (1)
+                Array : Write String Element$( "String tokenizer", 2 ) to (2)
+                Array : Write String Element$( "String tokenizer", 3 ) to (3)
+                Array : Write String Element$( "String tokenizer", 4 ) to (4)
+                Array : Write String Element$( "String tokenizer", 5 ) to (5)
+                Array : Write String Element$( "String tokenizer", 6 ) to (6)
+                Array : Write String Element$( "String tokenizer", 7 ) to (7)
+                Ini : Set current group to StrAtX( "Array", 3 )
+                Array : Write String ItemString$( "Ini", "launch" ) to (8)
+                Array : Write String ItemString$( "Ini", "icon" ) to (9)
+                New Objects : Create Tile at (8,32) layer 2
+                Tile : Set ID to Val(StrAtX( "Array", 0 ))
+                Tile : Set keyCode to Val(StrAtX( "Array", 1 ))
+                Tile : Set keyChar to StrAtX( "Array", 2 )
+                Tile : Set keyName to StrAtX( "Array", 3 )
+                Tile : Set tileX to Val(StrAtX( "Array", 4 ))
+                Tile : Set tileY to Val(StrAtX( "Array", 5 ))
+                Tile : Set X position to 52 * Val(StrAtX( "Array", 4 )) + 8
+                Tile : Set Y position to 52 * Val(StrAtX( "Array", 5 )) + 32
+                Tile : Force animation frame to Val(StrAtX( "Array", 7 ))
+                New Objects : Create Icon at (8,32) layer 1
+                Icon : Set ID to Val(StrAtX( "Array", 0 ))
+                Icon : Set keyCode to Val(StrAtX( "Array", 1 ))
+                Icon : Set keyChar to StrAtX( "Array", 2 )
+                Icon : Set keyName to StrAtX( "Array", 3 )
+                Icon : Set tileX to Val(StrAtX( "Array", 4 ))
+                Icon : Set tileY to Val(StrAtX( "Array", 5 ))
+                Icon : Set X position to 52 * Val(StrAtX( "Array", 4 )) + 8 + 8
+                Icon : Set Y position to 52 * Val(StrAtX( "Array", 5 )) + 32 + 8
+                Icon : Force animation frame to Val(StrAtX( "Array", 7 ))
+                Icon : Set iconPath to StrAtX( "Array", 9 )
+
+            // Set initial State of icons
+
+            * Run this event once
+            + iconPath of Icon <> ""
+                Icon : Set hasLinkCheck to 1
+                Icon : Reappear
+                Icon : Load Apppath$ + ".speedtile\" + iconPath( "Icon" ) into Animation Stopped, Direction ............, Frame #ID( "Icon" ), HotSpot(0,0), Action Point(0,0), Transparent Color RGB(0,0,0)
+                Icon : Force animation frame to ID( "Icon" )
+                Icon : Set scale to 1.0 (Quality = 1)
+                Icon : Set scale to 32.0 / OWidth( "Icon" ) (Quality = 1)
+
+        // Clean Up Memory a bit
+
+        * Always
+            String tokenizer : Destroy
+            List : Destroy
+            Special : Deactivate group "Init"
+
+    // 
+
+    [ DEBUG ]
+
+        // Change transparency of button on hover, as a test.
+
+        * Always
+            Tile : Set alpha-blending coefficient to 127
+
+        // DEBUG: Mouse Hover Highlight
+
+        * Mouse pointer is over Tile
+            Tile : Set alpha-blending coefficient to 31
+
+        [ DEBUG: Tile Keypad Highlight ]
+
+            // Change tile transparency on keyboard press.
+
+            // Math Keys
+
+            * Repeat while "/" is pressed
+            + ID of Tile = 15
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "*" is pressed
+            + ID of Tile = 10
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "-" is pressed
+            + ID of Tile = 13
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "+" is pressed
+            + ID of Tile = 11
+                Tile : Set alpha-blending coefficient to 0
+
+            // 7 8 9
+
+            * Repeat while "7 (Num. keypad)" is pressed
+            + ID of Tile = 7
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "8 (Num. keypad)" is pressed
+            + ID of Tile = 8
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "9 (Num. keypad)" is pressed
+            + ID of Tile = 9
+                Tile : Set alpha-blending coefficient to 0
+
+            // 4 5 6
+
+            * Repeat while "4 (Num. keypad)" is pressed
+            + ID of Tile = 4
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "5 (Num. keypad)" is pressed
+            + ID of Tile = 5
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "6 (Num. keypad)" is pressed
+            + ID of Tile = 6
+                Tile : Set alpha-blending coefficient to 0
+
+            // 1 2 3
+
+            * Repeat while "1 (Num. keypad)" is pressed
+            + ID of Tile = 1
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "2 (Num. keypad)" is pressed
+            + ID of Tile = 2
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "3 (Num. keypad)" is pressed
+            + ID of Tile = 3
+                Tile : Set alpha-blending coefficient to 0
+
+            // Extra Keys
+
+            * Repeat while "0 (Num. keypad)" is pressed
+            + ID of Tile = 0
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "." is pressed
+            + ID of Tile = 14
+                Tile : Set alpha-blending coefficient to 0
+
+            * Repeat while "Enter" is pressed
+            + ID of Tile = 12
+                Tile : Set alpha-blending coefficient to 0
+
+    [ Trigger MacroPad ]
+
+        [ Tile Trigger - MouseClick ]
+
+            // Change tile transparency on Tile Click
+
+            // Keypad Activates Tiles
+
+            // Repeat Key (for transparency effect)
+
+            * Mouse pointer is over Tile
+            + Repeat while left mouse-key is pressed
+                Tile : Set alpha-blending coefficient to 0
+
+            // Single Press
+
+            * Only one action when event loops
+            + NOT Repeat while "Backspace" is pressed
+            + User clicks with left button on Tile
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+        [ Tile Trigger - Keypad ]
+
+            // Change tile transparency on keyboard press.
+
+            // Keypad Activates Tiles
+
+            // Math Keys
+
+            * Upon pressing "/"
+            + ID of Tile = 15
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "*"
+            + ID of Tile = 10
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "-"
+            + ID of Tile = 13
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "+"
+            + ID of Tile = 11
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            // 7 8 9
+
+            * Upon pressing "7 (Num. keypad)"
+            + ID of Tile = 7
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "8 (Num. keypad)"
+            + ID of Tile = 8
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "9 (Num. keypad)"
+            + ID of Tile = 9
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            // 4 5 6
+
+            * Upon pressing "4 (Num. keypad)"
+            + ID of Tile = 4
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "5 (Num. keypad)"
+            + ID of Tile = 5
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "6 (Num. keypad)"
+            + ID of Tile = 6
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            // 1 2 3
+
+            * Upon pressing "1 (Num. keypad)"
+            + ID of Tile = 1
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "2 (Num. keypad)"
+            + ID of Tile = 2
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "3 (Num. keypad)"
+            + ID of Tile = 3
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            // Extra Keys
+
+            * Upon pressing "0 (Num. keypad)"
+            + ID of Tile = 0
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "."
+            + ID of Tile = 14
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+            * Upon pressing "Enter"
+            + ID of Tile = 12
+                Tile : Set alpha-blending coefficient to 0
+                Special : Set sendParam to keyName( "Tile" )
+                Special : Start loop "send" 1 times
+
+    [ Send Command ]
+
+        // Set the initial Parameters
+
+        * On loop "send"
+            Special : Set launchPath to GroupItemString$( "Ini", sendParam, "launch" )
+
+        // Check to make sure the launch path isn't BLANK
+
+        * On loop "send"
+        + launchPath <> ""
+            Sound : Play sample file Apppath$ + ".speedtile/sounds/" + soundConfirm_G on channel 1
+            Special : Set launchPath to GroupItemString$( "Ini", sendParam, "launch" )
+            Special : Execute external program launchPath"" 
+
+        * On loop "send"
+        + launchPath = ""
+            Error_Message : Set lifeCounter to 0
+            Sound : Play sample file Apppath$ + ".speedtile/sounds/" + soundError_G on channel 1
+            Special : Set launchPath to GroupItemString$( "Ini", sendParam, "launch" )
+            Error_Message : Force animation frame to 0
+
+    [ Error Messages ]
+
+        // Use a counter to display the message for a period of time. Also, fade the message over time.
+
+        * Every 00''-01
+        + lifeCounter of Error_Message < lifeSpan( "Error_Message" )
+            Error_Message : Add 1 to lifeCounter
+            Error_Message : Reappear
+            Error_Message : Set lifeTrans to ( lifeCounter( "Error_Message" ) * 1.0 / lifeSpan( "Error_Message" ) ) * 4.0 - 3.0
+            Error_Message : Set alpha-blending coefficient to lifeTrans( "Error_Message" ) * 255.0
+
+        * lifeCounter of Error_Message >= lifeSpan( "Error_Message" )
+            Error_Message : Make invisible
+
+    // 
+
+    [ DropFiles - Associate Path ]
+
+        // Use a counter to display the message for a period of time. Also, fade the message over time.
+
+        * Files have been dropped
+        + Mouse pointer is over Tile
+            Special : Set dropID to ID( "Tile" )
+            Ini : Set string Dropped$(0) to item "launch" in group keyName( "Tile" )
+            Array : Write String Dropped$(0) to (8, ID( "Tile" ))
+            Tile : Set hasLinkCheck to 1
+            Special : Start loop "extract" 1 times
+            Icon : Make invisible
+
+        * iconPath of Icon <> ""
+            Icon : Set hasLinkCheck to 1
+            Icon : Reappear
+
+    [ Delete - Dis-Associate Path ]
+
+        // Hold CTRL and RIGHT CLICK on a button to un-link the file from it.
+
+        * Repeat while "Control" is pressed
+        + User clicks with right button on Tile
+            Special : Set dropID to ID( "Tile" )
+            Group.Buttons : Set hasLinkCheck to 0
+            Group.Buttons : Set hasLink off
+            Sound : Play sample file Apppath$ + ".speedtile/sounds/" + soundDelete_G on channel 1
+            Ini : Set string "" to item "launch" in group keyName( "Tile" )
+            Ini : Set string "" to item "icon" in group keyName( "Tile" )
+            Array : Write String "" to (8, ID( "Tile" ))
+            Array : Write String "" to (9, ID( "Tile" ))
+            Error_Message : Set lifeCounter to 0
+            Error_Message : Force animation frame to 1
+            Special : Start loop "delete_icon" 1 times
+
+        * On loop "delete_icon"
+        + ID of Icon = dropID
+            Icon : Set iconPath to ""
+            Icon : Make invisible
+
+    // 
+
+[ Complex Icon Extraction ]
+
+    // init
+
+    * Start of Frame
+        File_Handler : Set extractIcon to """.speedtile\extracticon.exe"""
+
+    [ Drop a File ]
+
+        // Drop a File, get some basic info about it.
+
+        * On loop "extract"
+            File_Handler : Add to debugger
+            File_Handler : Set sourceFile to Dropped$(0)
+            File_Handler : Set sourceName to FileName$( "File", Dropped$(0) )
+            File_Handler : Set sourceType to ExtensionName$( "File", Dropped$(0) )
+            the timer : Fire event "file_type" after 00''-01
+
+    [ Determine File Type ]
+
+        // Determine File Type, and use appropriate method of generating an Icon.
+
+        // Files that use (ExtractIcon.exe) for processing
+
+        // NOTE: Make sure files are wrapped in quotes for the CMD. In fusion, you can escape quotes by simply doubling them ""
+        // 
+        // so something like this: "this part is ""quoted"""
+
+        // NOTE: To pause the CMD for debugging, you can add 
+        // + " & PAUSE"
+        // to the end of the "execute external program" line.
+
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".exe"
+            OR (logical)
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".lnk"
+            OR (logical)
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".pdf"
+            File_Handler : Set outputFile_rel to "auto_icons\" + sourceName( "File_Handler" ) + ".png"
+            File_Handler : Set outputFile to Apppath$ + ".speedtile\" + outputFile_rel( "File_Handler" )
+            File_Handler : Set fullCommand to extractIcon( "File_Handler" ) + " """ + sourceFile( "File_Handler" ) + """ """ + outputFile( "File_Handler" ) + """"
+            Special : Execute external program "cmd""/c echo " + fullCommand( "File_Handler" ) + " & " + fullCommand( "File_Handler" ) 
+            the timer : Fire event "load_icon" after 01''-00
+
+        // Image Files that use (Surface Object) for processing
+
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".png"
+            OR (logical)
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".jpg"
+            OR (logical)
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".jpeg"
+            OR (logical)
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".gif"
+            OR (logical)
+        * On timer event "file_type"
+        + sourceType of File_Handler = ".bmp"
+            File_Handler : Set outputFile_rel to "auto_thumbs\" + sourceName( "File_Handler" ) + ".png"
+            File_Handler : Set outputFile to Apppath$ + ".speedtile\" + outputFile_rel( "File_Handler" )
+            File_Handler : Set fullCommand to extractIcon( "File_Handler" ) + " " + sourceFile( "File_Handler" ) + " """ + outputFile( "File_Handler" ) + """"
+            Surface : Load image from file sourceFile( "File_Handler" )
+            Surface : Resize image to (256,256)
+            Surface : Save image to file outputFile( "File_Handler" ), override extension = "png"
+            the timer : Fire event "load_icon" after 01''-00
+
+    // Load that PNG file into an Active
+
+    // NOTE: Here we have to first set the scale to 1.0 after loading an image, otherwise the active falsely reports its OWidth value as 32 (its old value). It looks like this doesn't get updated on-load, and only once the object have been scaled or moved.
+
+    * On timer event "load_icon"
+    + ID of Icon = dropID
+        Array : Write String outputFile_rel( "File_Handler" ) to (9, dropID)
+        Ini : Set string outputFile_rel( "File_Handler" ) to item "icon" in group StrAtXY( "Array", 3, dropID )
+        Icon : Load outputFile( "File_Handler" ) into Animation Stopped, Direction ..........., Frame #ID( "Icon" ), HotSpot(0,0), Action Point(0,0), Transparent Color RGB(0,0,0)
+        Icon : Force animation frame to ID( "Icon" )
+        Icon : Set scale to 1.0 (Quality = 1)
+        Icon : Set scale to 32.0 / OWidth( "Icon" ) (Quality = 1)
+        Icon : Reappear
+
+```
+</textarea>
+                </td>
+                <td>
+                    <textarea name="output" id="output" rows="15" wrap="soft">Output will appear here after you hit "convert"</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="selectBtn" onclick="textSelect()">Select All</button>
+                </td>
+                <td>
+                    <button id="convertBtn" onclick="readLines()">Convert</button>
+                </td>
+            </tr>
+            <!-- Old button, spans whole table -->
+            <!-- 
+            <tr>
+                <td colspan="2">
+                    <button id="convertBtn" onclick="readLines()">Convert</button>
+                </td>
+            </tr>
+            -->
+        </tbody>
+    </table>
+
+    <hr />
+
+    <!--
+    ██████╗ ███████╗███████╗ ██████╗██████╗ ██╗██████╗ ████████╗██╗ ██████╗ ███╗   ██╗
+    ██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║
+    ██║  ██║█████╗  ███████╗██║     ██████╔╝██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║
+    ██║  ██║██╔══╝  ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║
+    ██████╔╝███████╗███████║╚██████╗██║  ██║██║██║        ██║   ██║╚██████╔╝██║ ╚████║
+    ╚═════╝ ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+    -->
+    <!-- Description and FOOTER are disabled for now, just to keep the screen more clean -->
+    <div id="description">
+        <script src="includes/description.js"></script>
+    </div>
+    
+    <!--
+    ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+    ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+    █████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+    ██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+    ██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+    ╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+    -->
+    <div id="pre-footer">
+        <script src="includes/footer.js"></script>
+    </div>
+
+    <footer>
+        Check out some of my other work on <a href="https://jameso2.itch.io" rel="noopener" target="_blank">Itch.io</a> or send me a tip on <a href="https://ko-fi.com/jamesorthii" rel="noopener" target="_blank">Ko-Fi</a>! - JamesO2
+    </footer>
+
+    <!--
+    ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗███████╗
+    ██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██╔════╝
+    ███████╗██║     ██████╔╝██║██████╔╝   ██║   ███████╗
+    ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║   ╚════██║
+    ███████║╚██████╗██║  ██║██║██║        ██║   ███████║
+    ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚══════╝
+    -->
+
+    <!-- CodeMirror Scripts -->
+    <script src="./codemirror/lib/codemirror.js"></script>
+    <script src="./codemirror/mode/javascript/javascript.js"></script>
+    <script>
+        // This line replaces an existing TextArea element with a codeMirror box 
+        var myCodeMirrorA = CodeMirror.fromTextArea(input, {
+            lineWrapping: false,
+            lineNumbers: true,
+            firstLineNumber: 1,
+            theme: "dracula",
+            mode:  "javascript"
+        });
+
+        // This line replaces an existing TextArea element with a codeMirror box 
+        var myCodeMirrorB = CodeMirror.fromTextArea(output, {
+            lineWrapping: false,
+            lineNumbers: true,
+            firstLineNumber: 1,
+            theme: "dracula",
+            mode:  "javascript"
+        });
+
+        // myCodeMirrorA.setSize(500, 300);
+        // myCodeMirrorB.setSize(500, 300);
+
+
+        // gets the value from one CodeMirror box and puts into another CodeMirror 
+        myCodeMirrorB.setValue(myCodeMirrorA.getValue());
+
+        document.getElementById('input').remove();
+        document.getElementById('output').remove();
+
+    </script>
+
+    <!-- Utility Scripts -->
+    <script src="util-scripts/_switcher.js"></script>
+    <script src="util-scripts/allow-tab-key.js"></script>
+    <script src="util-scripts/clipboard.js"></script>
+    
+    <!-- Text Convsersion Scripts -->
+    <!-- <script src="conversion-scripts/_BASE_Working.js"></script> -->
+    <script src="conversion-scripts/_BASE.js"></script>
+    <script src="conversion-scripts/modeLulusListA.js"></script>
+    <script src="conversion-scripts/modeSpreadsheetTSV.js"></script>
+    <script src="conversion-scripts/modeHTMLTable.js"></script>
+    <script src="conversion-scripts/modeJo2SocialLinks.js"></script>
+    <script src="conversion-scripts/modeMFAtoJS.js"></script>
+    <script src=""></script>
+
+</body>
+</html>

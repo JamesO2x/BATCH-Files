@@ -1,0 +1,23 @@
+// This is the format:
+|| title || URL || description || tag1 tag2 etc
+
+## Some links I like.
+|| paul mccartney || https://paulmccartney.com || My favorite underground musician, I think he's gonna be big someday. || music obscure-media
+|| neopets || https://neopets.com || A little-known capitalism simulator. || games obscure-media
+|| Third Item || https://neocities.org || (This link takes you to NeoCities.org) || websites creative
+|| 4th Item || https://neocities.org || (This link takes you to NeoCities.org) || websites creative
+|| 5th Item || https://neocities.org || (This link takes you to NeoCities.org) || websites creative
+
+// Any lines starting with the double-slash like this will be ignored, and not added to the output. But you have to make sure there are no spaces before the // part, otherwise it won't work.
+// And you can add as many comment lines like this as you want. :)
+
+<h3>Example of regular <strong>HTML</strong> in between lines</h3>
+|| JamesO2.NeoCities.org || https://jameso2.neocities.org || JamesO2's site || tag1 tag2 etc
+|| JamesO2's Portfolio Collage || https://youtu.be/NSzUt5DZ2tk || A youtube video of some pixel animations || tag1 tag2 etc
+|| Email Example || mailto:example@site.com || (you can direct-link to an email if you add "mailto:example@site.com" for the URL) || tag1 tag2 etc
+
+<hr/>
+<h4>Different Spacing produces same results!:</h4>
+// How you want to add spacing around the || is optional. So both of these following lines will produce the same result:
+    ||   paul mccartney   ||   https://paulmccartney.com   ||   My favorite underground musician, I think he's gonna be big someday.   ||   music obscure-media
+||paul mccartney||https://paulmccartney.com||My favorite underground musician, I think he's gonna be big someday.||music obscure-media

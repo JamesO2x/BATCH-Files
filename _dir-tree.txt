@@ -1,0 +1,30 @@
+Folder PATH listing for volume Cloud HDD
+Volume serial number is 7473-7415
+J:.
++---BAT
+|   +---Asesprite Scripts
+|   |   \---Export GIFs
+|   |       +---tags_x1
+|   |       \---tags_x2
+|   +---AutoHotKey Scripts
+|   +---Everything Search Scripts
+|   +---Folder Manipulation Scripts
+|   +---Image Conversion Scripts
+|   +---Misc Scripts
+|   +---Text Conversion Scripts
+|   +---ToDoList Scripts
+|   +---Windows RegEdits
+|   +---Windows Scripts
+|   +---WinRAR Backup Scripts
+|   +---_Drag-N-Drop-Prompts
+|   +---_experimental
+|   |   +---auto-backup
+|   |   +---batch variables
+|   |   \---get-date-stamp
+|   \---_SORT_ME
++---JS
+|   +---conversion-scripts
+|   +---includes
+|   +---media
+|   \---util-scripts
+\---_backup
