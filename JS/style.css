@@ -153,4 +153,8 @@
     resize: vertical;
   }
 
+  .CodeMirror {
+    width: 50%;
+  }
+
 /* #endregion */
